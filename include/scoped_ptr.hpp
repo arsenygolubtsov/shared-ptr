@@ -19,13 +19,13 @@ public:
 		}
 		ptr_ = ptr;
 	}
-	T & operator *(){
+	T & operator *() const{
 		return *ptr_;
 	}
-	T * operator ->(){
+	T * operator ->() const{
 		return ptr_;
 	}
-	T * get(){
+	T * get() const{
 		return ptr_;
 	}
 	void swap(scoped_ptr & other){
