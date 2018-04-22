@@ -8,6 +8,9 @@ public:
 	scoped_ptr(){
 		ptr_ = nullptr;
 	}
+	scoped_ptr (T * ptr){
+		ptr_ = ptr;
+	}
 	~scoped_ptr(){
 		if(ptr_){
 			delete ptr_;
