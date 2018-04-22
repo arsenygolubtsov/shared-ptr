@@ -2,7 +2,7 @@
 
 template <typename T>
 class scoped_ptr{
-pravate:
+private:
 	T * ptr_;
 public:
 	scoped_ptr(){
