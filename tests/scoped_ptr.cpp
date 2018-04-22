@@ -13,7 +13,7 @@ TEST_CASE("num1"){
 	int ptr_2 = *ptr2;
 	
 	REQUIRE(*ptr_1 == 3);
-	REQUIRE(ptr_2 = 6);
+	REQUIRE(ptr_2 == 6);
 }
 
 TEST_CASE("num2"){
@@ -29,5 +29,5 @@ TEST_CASE("num2"){
 	int ptr_2 = *ptr2;
 	
 	REQUIRE(*ptr_1 == 6);
-	REQUIRE(ptr_2 = 3);	
+	REQUIRE(ptr_2 == 3);	
 }
