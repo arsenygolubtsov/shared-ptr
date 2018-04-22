@@ -32,7 +32,7 @@ TEST_CASE("num3"){
 	scoped_ptr <int> ptr1(new int(3));
 	ptr1.reset(new int(6));
 	
-	int ptr = ptr1.get();
+	int *ptr = ptr1.get();
 	
-	REQUIRE(ptr1 == 6);
+	REQUIRE(*ptr == 6);
 }
