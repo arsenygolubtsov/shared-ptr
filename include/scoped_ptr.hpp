@@ -5,10 +5,7 @@ class scoped_ptr{
 private:
 	T * ptr_;
 public:
-	scoped_ptr(){
-		ptr_ = nullptr;
-	}
-	scoped_ptr (T * ptr){
+	scoped_ptr(T * ptr = nullptr){
 		ptr_ = ptr;
 	}
 	~scoped_ptr(){
