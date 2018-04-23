@@ -3,16 +3,31 @@
 template <typename T>
 class scoped_ptr{
 private:
+	size_t * counter_;
 	T * ptr_;
 public:
-	scoped_ptr(T * ptr = nullptr){
+	shared_ptr(T * ptr = nullptr){
 		ptr_ = ptr;
-	}
-	~scoped_ptr(){
-		if(ptr_){
-			delete ptr_;
+		if(ptr){
+			*counter_ = new size_t (1);
+		}
+		else{
+			counter_ = nullptr;
 		}
 	}
+	~shared_ptr(){
+		if(ptr_){
+			delete ptr_;
+			*counter_--;
+		}
+		if(*counter_ == 0){
+			delete counter_;
+		}
+	}
+	shared_ptr(shared_ptr <T> const & other){
+		if(other.ptr_){
+			new T * t = other.ptr_;
+			
 	void reset(T * ptr){
 		if(ptr_){
 			delete ptr_;
