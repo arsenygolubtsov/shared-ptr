@@ -3,6 +3,12 @@
 
 #include "scoped_ptr.hpp"
 
+TEST_CASE("NULL"){
+	scoped_ptr <int> ptr;
+	int *ptr_ = ptr1.get();
+	
+	(REQUIRE *ptr_ == nullptr);
+}
 TEST_CASE("num1"){
 	scoped_ptr <int> ptr1(new int(3));
 	int *ptr_1 = ptr1.get();
