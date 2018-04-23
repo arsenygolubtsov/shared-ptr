@@ -5,9 +5,9 @@
 
 TEST_CASE("NULL"){
 	scoped_ptr <int> ptr;
-	int *ptr_ = ptr.get();
+	int *ptr_null = ptr.get();
 	
-	REQUIRE (*ptr_ == nullptr);
+	REQUIRE (*ptr_null == nullptr);
 }
 TEST_CASE("num1"){
 	scoped_ptr <int> ptr1(new int(3));
