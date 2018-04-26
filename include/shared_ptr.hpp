@@ -1,7 +1,7 @@
 #include <iostream>
 
 template <typename T>
-class scoped_ptr{
+class shared_ptr{
 private:
 	size_t * counter_;
 	T * ptr_;
