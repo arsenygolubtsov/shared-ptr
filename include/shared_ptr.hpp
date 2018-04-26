@@ -9,7 +9,7 @@ public:
 	shared_ptr(T * ptr = nullptr){
 		ptr_ = ptr;
 		if(ptr){
-			*counter_ = new std::size_t(1);
+			counter_ = new std::size_t(1);
 		}
 		else{
 			counter_ = nullptr;
@@ -56,13 +56,13 @@ public:
 		if(ptr_){
 			if(*counter_ == 1){
 				delete ptr_;
-				delete conter_;
+				delete counter_;
 			}
 			else{
 				--*counter_;
 			}
 		}
-		ptr_ = other.ptr_;
+		ptr_ = ptr;
 		if(ptr_){
 			counter_ = new std::size_t(1);
 		}
