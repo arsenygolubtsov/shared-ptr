@@ -16,11 +16,8 @@ public:
 		}
 	}
 	~shared_ptr(){
-		if(ptr_){
+		if(ptr_ && --*counter_ == 0){
 			delete ptr_;
-			--*counter_;
-		}
-		if(*counter_ == 0){
 			delete counter_;
 		}
 	}
