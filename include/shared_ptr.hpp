@@ -83,6 +83,4 @@ public:
 		std::swap(ptr_, other.ptr_);
 		std::swap(counter_, other.counter_);
 	}
-	scoped_ptr & operator=(scoped_ptr const &) = delete;
-	scoped_ptr(scoped_ptr const &) = delete;
 };
